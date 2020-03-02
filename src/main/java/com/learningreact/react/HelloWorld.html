@@ -15,6 +15,41 @@
     }
 
     ReactDOM.render(<Hello />, document.getElementById('mydiv'))
+
+
+    class App extends  React.Component {
+
+        constructor(props) {
+            super(props);
+            this.state = {
+                bgColor: ""
+            }
+        }
+
+
+        boxClick = (e) => {
+            this.setState({
+                bgColor: "red"
+            })
+        }
+
+        ReactDOM.render(element,body) {
+            return (
+                <div className="App">
+
+
+                    <article className='experimentsHolder'>
+                        <h2>Test 3</h2>
+                        <p>This is an example of an onClick event 'renderd' by react.</p>
+                        <div className="boxClickCss"
+                             style={{backgroundColor: this.state.bgColor}}
+                             onClick={this.boxClick}>Click Me!</div>
+                    </article>
+
+                </div>
+            );
+        }
+    }
 </script>
 
 </body>
